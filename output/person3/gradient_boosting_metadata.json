@@ -1,0 +1,45 @@
+{
+  "model_name": "Gradient Boosting Regressor",
+  "library": "scikit-learn",
+  "hyperparameters": {
+    "loss": "absolute_error",
+    "learning_rate": 0.1,
+    "n_estimators": 100,
+    "max_depth": 2,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "random_state": 42
+  },
+  "hyperparameter_rationale": {
+    "loss": "Loss absolute_error (Least Absolute Deviations) mengoptimalkan median residu, memberikan ketahanan superior terhadap outlier dan pergeseran rezim harga minyak historis dibanding squared_error.",
+    "learning_rate": "Learning rate 0.1 memberikan laju penurunan gradien yang teratur dan mencegah osilasi prediksi.",
+    "n_estimators": "100 estimator memberikan jumlah iterasi bertahap yang cukup untuk meminimalkan loss tanpa risiko overfitting berlebih.",
+    "max_depth": "Kedalaman pohon 2 (shallow trees) membatasi interaksi non-linear tingkat tinggi pada 74 fitur keuangan, menghasilkan generalisasi testing yang jauh lebih baik.",
+    "min_samples_split": "Nilai 2 memberikan fleksibilitas pembagian cabang pada pohon dangkal.",
+    "min_samples_leaf": "Nilai 1 memaksimalkan pemanfaatan informasi pada terminal leaf.",
+    "random_state": "Menjamin determinisme dan keterulangan (reproducibility) eksperimen."
+  },
+  "data_used": {
+    "train_file": "output\\person1\\train_preprocessed.csv",
+    "test_file": "output\\person1\\test_preprocessed.csv",
+    "train_samples": 1374,
+    "test_samples": 344,
+    "features_count": 74,
+    "target": "USO_Close"
+  },
+  "evaluation_metrics": {
+    "MAE": 6.065922208396725,
+    "MAPE": 0.4700014709734669,
+    "MAPE_percentage": 47.00014709734669,
+    "MSE": 41.49123075679434,
+    "RMSE": 6.441368702131119,
+    "R2_Score": -13.409811515190313
+  },
+  "saved_files": [
+    "output\\person3\\gradient_boosting_predictions.csv",
+    "output\\person3\\gradient_boosting_metrics.csv",
+    "output\\person3\\gradient_boosting_model.joblib",
+    "output\\person3\\actual_vs_predicted.png",
+    "output\\person3\\residual_plot.png"
+  ]
+}

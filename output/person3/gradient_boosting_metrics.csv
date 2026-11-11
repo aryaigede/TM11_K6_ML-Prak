@@ -1,0 +1,6 @@
+Metric,Value,Description
+MAE,6.065922208396725,Mean Absolute Error ($)
+MAPE,47.00014709734669,Mean Absolute Percentage Error (%)
+MSE,41.49123075679434,Mean Squared Error ($^2)
+RMSE,6.441368702131119,Root Mean Squared Error ($)
+R2_Score,-13.409811515190313,Koefisien Determinasi R^2

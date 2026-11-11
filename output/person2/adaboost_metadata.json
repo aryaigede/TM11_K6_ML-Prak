@@ -1,0 +1,42 @@
+{
+  "model_name": "AdaBoost Regressor",
+  "library": "scikit-learn",
+  "hyperparameters": {
+    "base_estimator": "DecisionTreeRegressor(max_depth=3)",
+    "base_max_depth": 3,
+    "n_estimators": 50,
+    "learning_rate": 1.0,
+    "loss": "linear",
+    "random_state": 42
+  },
+  "hyperparameter_rationale": {
+    "base_max_depth": "Kedalaman pohon 3 bertindak sebagai weak learner yang membatasi kompleksitas individu pohon untuk mencegah overfitting pada pola harga masa lalu.",
+    "n_estimators": "50 estimator memberikan jumlah siklus boosting yang memadai untuk konvergensi pembobotan sampel error tanpa redundansi komputasi.",
+    "learning_rate": "Learning rate 1.0 adalah shrinkage standar AdaBoost.R2 yang memberikan adaptasi bobot penuh pada fungsi loss linear.",
+    "loss": "Loss linear memberikan pembobotan relatif proporsional terhadap margin error yang lebih stabil pada pergerakan harga deret waktu.",
+    "random_state": "Menjamin determinisme dan keterulangan (reproducibility) eksperimen."
+  },
+  "data_used": {
+    "train_file": "output\\person1\\train_preprocessed.csv",
+    "test_file": "output\\person1\\test_preprocessed.csv",
+    "train_samples": 1374,
+    "test_samples": 344,
+    "features_count": 74,
+    "target": "USO_Close"
+  },
+  "evaluation_metrics": {
+    "MAE": 6.193732647913796,
+    "MAPE": 0.45348435235992623,
+    "MAPE_percentage": 45.348435235992625,
+    "MSE": 64.29267511671257,
+    "RMSE": 8.01827132970147,
+    "R2_Score": -21.328702073690256
+  },
+  "saved_files": [
+    "output\\person2\\adaboost_predictions.csv",
+    "output\\person2\\adaboost_metrics.csv",
+    "output\\person2\\adaboost_model.joblib",
+    "output\\person2\\actual_vs_predicted.png",
+    "output\\person2\\residual_plot.png"
+  ]
+}

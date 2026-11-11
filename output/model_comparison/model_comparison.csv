@@ -1,0 +1,6 @@
+Metric,Description,AdaBoost_Regressor,Gradient_Boosting_Regressor,Difference_GB_vs_Ada,Difference_Percentage,Superior_Model,Goal,Notes
+MAE,Mean Absolute Error ($),6.193732647913796,6.065922208396725,-0.12781043951707094,-2.0635446633319035,Gradient Boosting,Lebih lower lebih baik,Selisih absolut rata-rata harga prediksi terhadap aktual
+MAPE,Mean Absolute Percentage Error (%),45.348435235992625,47.00014709734669,1.651711861354066,3.6422686973841114,AdaBoost,Lebih lower lebih baik,Persentase rata-rata error relatif terhadap aktual
+MSE,Mean Squared Error ($^2),64.29267511671257,41.49123075679434,-22.801444359918236,-35.46507330504764,Gradient Boosting,Lebih lower lebih baik,Rata-rata kuadrat kesalahan (memberi penalti besar pada error ekstrem)
+RMSE,Root Mean Squared Error ($),8.01827132970147,6.441368702131119,-1.5769026275703508,-19.666366511309626,Gradient Boosting,Lebih lower lebih baik,Akar kuadrat MSE (skala dolar yang sama dengan target)
+R2_Score,Koefisien Determinasi R^2,-21.328702073690256,-13.409811515190313,7.9188905584999425,37.127859590988365,Gradient Boosting,Lebih higher lebih baik,Proporsi variansi target yang dapat dijelaskan model

@@ -1,0 +1,52 @@
+{
+  "title": "Perbandingan Model Regresi Modul 11 (Kelompok K6)",
+  "models_evaluated": [
+    "AdaBoost Regressor",
+    "Gradient Boosting Regressor"
+  ],
+  "dataset_info": {
+    "test_samples": 344,
+    "test_period": [
+      "2017-08-11",
+      "2018-12-31"
+    ],
+    "target": "USO_Close",
+    "features_count": 74
+  },
+  "metrics_comparison": {
+    "MAE": {
+      "AdaBoost": 6.193732647913796,
+      "Gradient_Boosting": 6.065922208396725,
+      "winner": "Gradient Boosting"
+    },
+    "MAPE": {
+      "AdaBoost": 45.348435235992625,
+      "Gradient_Boosting": 47.00014709734669,
+      "winner": "AdaBoost"
+    },
+    "MSE": {
+      "AdaBoost": 64.29267511671257,
+      "Gradient_Boosting": 41.49123075679434,
+      "winner": "Gradient Boosting"
+    },
+    "RMSE": {
+      "AdaBoost": 8.01827132970147,
+      "Gradient_Boosting": 6.441368702131119,
+      "winner": "Gradient Boosting"
+    },
+    "R2_Score": {
+      "AdaBoost": -21.328702073690256,
+      "Gradient_Boosting": -13.409811515190313,
+      "winner": "Gradient Boosting"
+    }
+  },
+  "overall_winner": "Gradient Boosting Regressor",
+  "key_findings": [
+    "Gradient Boosting unggul pada 4 dari 5 metrik evaluasi (MAE, MSE, RMSE, R\u00b2).",
+    "MSE pada Gradient Boosting 35.5% lebih rendah dibandingkan AdaBoost (41.49 vs 64.29).",
+    "RMSE pada Gradient Boosting 19.7% lebih presisi (6.44 vs 8.02).",
+    "AdaBoost sedikit lebih unggul pada MAPE (45.35% vs 47.00%) karena penalti persentase di titik harga rendah.",
+    "R\u00b2 pada kedua model bernilai negatif karena adanya pergeseran rezim harga (structural shift) antara periode training (2011-2017) dan testing (2017-2018)."
+  ],
+  "recommendation": "Gradient Boosting Regressor direkomendasikan untuk implementasi antarmuka pengguna (UI/UX) karena memiliki stabilitas margin error kuadratik dan presisi deviasi yang jauh lebih baik."
+}
